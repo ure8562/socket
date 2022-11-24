@@ -71,6 +71,8 @@ void *send_msg(void *arg)
         //Q입력시 종료
         if(!strcmp(msg, "q\n") || !strcmp(msg, "Q\n"))
         {
+            
+            write(sock, "Close", 5);
             //  서버에 EOF 전송
             close(sock);
             exit(0);
@@ -97,8 +99,7 @@ void *recv_msg(void *arg)
          * Why? 
          * send_msg 에서 close(sock)이 실행되고
          * 서버로 EOF 가 갔으면, 서버는 그것을 받아서 "자기가 가진" 클라이언트 소켓을 close 할것
-         * 그러면 read 했을 때 결과가 -1dlf rjt
-        */
+         * 그러면 read 했을 때 결과가 -1 */
 
        name_msg[str_len] = 0;
        fputs(name_msg, stdout);
