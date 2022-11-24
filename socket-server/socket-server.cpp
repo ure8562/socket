@@ -110,7 +110,7 @@ void *handle_clnt(void *arg)
    while(status)
    {
         str_len = read(clnt_sock, msg, sizeof(msg));
-        if(msg[0] == 'C' && msg[1] == 'l' && msg[2] == 'o' && msg[4] == 's' && msg[4] == 'e')
+        if(msg[0] == 'C'&& msg[1] == 'l' && msg[2] == 'o' && msg[3] == 's' && msg[4] == 'e')
         {
             status = false;
         }
