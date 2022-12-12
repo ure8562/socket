@@ -6,7 +6,8 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <string>
-#include<pthread.h>
+#include <pthread.h>
+#include "./mariadb_work/mariadb_work.h"
 
 #define BUF_SIZE 100    //  최대글자수
 #define MAX_CLNT 255    //  최대 동시 접속 가능 수
@@ -28,6 +29,25 @@ pthread_mutex_t mutx;   //  mutex 선언 - 다중 쓰레드끼리 전역변수 �
 
 int main(void)
 {
+    mariadb test1;
+    test1.mysqlID.server = "localhost";
+    test1.mysqlID.user = "root";
+    test1.mysqlID.password = "1234";
+    test1.mysqlID.database = "bongtest";
+
+    test1.mysql_connections_setup();
+
+    test1.mysql_perform_query(test1.conn, "DESC MEMBER");
+
+    printf("MYSQL Tables inmysql database:\n");
+    while((test1.row = mysql_fetch_row(test1.res)) != NULL)
+    {
+        printf("%s\n", test1.row[0]);
+    }
+
+    mysql_free_result(test1.res);
+    mysql_close(test1.conn);
+
     int serv_sock, clnt_sock;
     struct sockaddr_in serv_adr, clnt_adr;
     int clnt_adr_sz;
@@ -89,6 +109,7 @@ int main(void)
         pthread_detach(t_id);
         printf("Connected client IP: %s \n", inet_ntoa(clnt_adr.sin_addr));
     }
+    printf("Close\n");
     close(serv_sock);
     return 0;
 }

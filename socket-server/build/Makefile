@@ -523,6 +523,30 @@ server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
 .PHONY : server/fast
 
+mariadb_work/mariadb_work.o: mariadb_work/mariadb_work.cpp.o
+.PHONY : mariadb_work/mariadb_work.o
+
+# target to build an object file
+mariadb_work/mariadb_work.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/mariadb_work/mariadb_work.cpp.o
+.PHONY : mariadb_work/mariadb_work.cpp.o
+
+mariadb_work/mariadb_work.i: mariadb_work/mariadb_work.cpp.i
+.PHONY : mariadb_work/mariadb_work.i
+
+# target to preprocess a source file
+mariadb_work/mariadb_work.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/mariadb_work/mariadb_work.cpp.i
+.PHONY : mariadb_work/mariadb_work.cpp.i
+
+mariadb_work/mariadb_work.s: mariadb_work/mariadb_work.cpp.s
+.PHONY : mariadb_work/mariadb_work.s
+
+# target to generate assembly for a file
+mariadb_work/mariadb_work.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/mariadb_work/mariadb_work.cpp.s
+.PHONY : mariadb_work/mariadb_work.cpp.s
+
 socket-server.o: socket-server.cpp.o
 .PHONY : socket-server.o
 
@@ -587,6 +611,9 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... server"
+	@echo "... mariadb_work/mariadb_work.o"
+	@echo "... mariadb_work/mariadb_work.i"
+	@echo "... mariadb_work/mariadb_work.s"
 	@echo "... socket-server.o"
 	@echo "... socket-server.i"
 	@echo "... socket-server.s"

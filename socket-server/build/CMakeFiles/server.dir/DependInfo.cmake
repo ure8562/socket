@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/bong/Documents/Bong-Test/socket-server/mariadb_work/mariadb_work.cpp" "CMakeFiles/server.dir/mariadb_work/mariadb_work.cpp.o" "gcc" "CMakeFiles/server.dir/mariadb_work/mariadb_work.cpp.o.d"
   "/home/bong/Documents/Bong-Test/socket-server/socket-server.cpp" "CMakeFiles/server.dir/socket-server.cpp.o" "gcc" "CMakeFiles/server.dir/socket-server.cpp.o.d"
   )
 

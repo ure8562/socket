@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/server.dir/socket-server.cpp.o -o server  -lpthread 
+/usr/bin/c++ -rdynamic CMakeFiles/server.dir/socket-server.cpp.o CMakeFiles/server.dir/mariadb_work/mariadb_work.cpp.o -o server  -lpthread -lmysqlclient 

@@ -1,0 +1,5 @@
+0.1 버전
+Maria DB 와 연동 작업 코드 추가
+현재 Connect 완료 데이터 확인
+mysql_perform_query로 sql 명령어 사용
+
