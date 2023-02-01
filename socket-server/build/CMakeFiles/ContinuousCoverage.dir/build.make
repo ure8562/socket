@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bong/Documents/Bong-Test/socket-server
+CMAKE_SOURCE_DIR = /home/bong/Documents/bong-unity/socket/socket-server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bong/Documents/Bong-Test/socket-server/build
+CMAKE_BINARY_DIR = /home/bong/Documents/bong-unity/socket/socket-server/build
 
 # Utility rule file for ContinuousCoverage.
 
@@ -82,6 +82,6 @@ CMakeFiles/ContinuousCoverage.dir/clean:
 .PHONY : CMakeFiles/ContinuousCoverage.dir/clean
 
 CMakeFiles/ContinuousCoverage.dir/depend:
-	cd /home/bong/Documents/Bong-Test/socket-server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bong/Documents/Bong-Test/socket-server /home/bong/Documents/Bong-Test/socket-server /home/bong/Documents/Bong-Test/socket-server/build /home/bong/Documents/Bong-Test/socket-server/build /home/bong/Documents/Bong-Test/socket-server/build/CMakeFiles/ContinuousCoverage.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bong/Documents/bong-unity/socket/socket-server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bong/Documents/bong-unity/socket/socket-server /home/bong/Documents/bong-unity/socket/socket-server /home/bong/Documents/bong-unity/socket/socket-server/build /home/bong/Documents/bong-unity/socket/socket-server/build /home/bong/Documents/bong-unity/socket/socket-server/build/CMakeFiles/ContinuousCoverage.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ContinuousCoverage.dir/depend
 

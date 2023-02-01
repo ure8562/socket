@@ -11,7 +11,7 @@ enable_testing()
 add_executable(server socket-server.cpp ./mariadb_work/mariadb_work.cpp)
 
 #TARGET_LINK_LIBRARIES(server PUBLIC -lpthread -lmysqlclient Mariadb_work)
-TARGET_LINK_LIBRARIES(server PUBLIC -lpthread -lmysqlclient)
+TARGET_LINK_LIBRARIES(server PUBLIC -lpthread -lmariadbclient)
 
 #LINK_LIBRARIES(-lmysqlclient)
 

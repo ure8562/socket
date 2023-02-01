@@ -30,14 +30,14 @@ pthread_mutex_t mutx;   //  mutex 선언 - 다중 쓰레드끼리 전역변수 �
 int main(void)
 {
     mariadb test1;
+
     test1.mysqlID.server = "localhost";
     test1.mysqlID.user = "root";
     test1.mysqlID.password = "1234";
-    test1.mysqlID.database = "bongtest";
+    test1.mysqlID.database = "bong test";
+    test1.mysql_connection_setup();
 
-    test1.mysql_connections_setup();
-
-    test1.mysql_perform_query(test1.conn, "DESC MEMBER");
+    test1.mysql_perform_query(test1.conn, "show tables");
 
     printf("MYSQL Tables inmysql database:\n");
     while((test1.row = mysql_fetch_row(test1.res)) != NULL)

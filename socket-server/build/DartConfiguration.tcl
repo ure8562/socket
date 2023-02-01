@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/bong/Documents/Bong-Test/socket-server
-BuildDirectory: /home/bong/Documents/Bong-Test/socket-server/build
+SourceDirectory: /home/bong/Documents/bong-unity/socket/socket-server
+BuildDirectory: /home/bong/Documents/bong-unity/socket/socket-server/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -26,7 +26,7 @@ SubmitURL: http://
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/bong/Documents/Bong-Test/socket-server"
+ConfigureCommand: "/usr/bin/cmake" "/home/bong/Documents/bong-unity/socket/socket-server"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
